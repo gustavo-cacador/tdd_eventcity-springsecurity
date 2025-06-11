@@ -30,7 +30,7 @@ public class EventService {
         event.setName(dto.getName());
         event.setDate(dto.getDate());
         event.setUrl(dto.getUrl());
-        event.setCity(new City(dto.getCityId(), dto.getName()));
+        event.setCity(new City(dto.getCityId(), null));
         event = eventRepository.save(event);
         return new EventDTO(event);
     }
